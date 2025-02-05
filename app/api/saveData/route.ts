@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     }
 
     // Find existing entry by ID
-    const existingIndex = existingData.findIndex((entry) => entry.id === newEntry.id);
+    const existingIndex = existingData.findIndex((entry: { id: string }) => entry.id === newEntry.id);
 
     if (existingIndex !== -1) {
       // Update existing entry

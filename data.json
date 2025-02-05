@@ -82,5 +82,38 @@
     "id": "301a81f1-3497-4ae2-8325-8c61ae044283",
     "updatedAt": "2025-02-05T06:22:08.898Z",
     "createdAt": "2025-02-05T06:22:01.081Z"
+  },
+  {
+    "skills": [
+      "React",
+      "Node.js",
+      "Python"
+    ],
+    "name": "Samir q",
+    "email": "samirsadek1009@gmail.com",
+    "phone": "01860425693",
+    "experienceLevel": "Senior",
+    "expectedSalary": 12345678,
+    "employmentStatus": "Employed",
+    "introduction": "sdfghj",
+    "id": "78d405ad-a1e1-44e9-8a3b-4c9287c28f46",
+    "createdAt": "2025-02-04T22:35:57.972Z",
+    "updatedAt": "2025-02-05T07:14:48.955Z"
+  },
+  {
+    "skills": [
+      "React",
+      "JavaScript",
+      "Node.js"
+    ],
+    "experienceLevel": "Mid",
+    "name": "Samir Sadekssss",
+    "email": "samirsadek1009@gmail.com",
+    "phone": "01860425693",
+    "expectedSalary": 2332,
+    "employmentStatus": "Employed",
+    "introduction": "232",
+    "id": "091b534d-32cd-46f2-97f6-075e1092e80c",
+    "updatedAt": "2025-02-05T07:15:03.250Z"
   }
 ]

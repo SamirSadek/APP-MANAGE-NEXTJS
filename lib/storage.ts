@@ -1,3 +1,5 @@
+
+
 import { FormData } from './types';
 
 const STORAGE_KEY = 'form_data';
@@ -25,6 +27,7 @@ export const saveFormData = (data: FormData): void => {
   
 
 export const getFormData = (): FormData[] => {
+  if (typeof window === "undefined") return []; // Prevent SSR errors
   const data = localStorage.getItem(STORAGE_KEY);
   return data ? JSON.parse(data) : [];
 };

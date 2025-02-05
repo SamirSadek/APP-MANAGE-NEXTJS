@@ -1,5 +1,6 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
@@ -28,7 +29,6 @@ import { FormData } from "@/lib/types";
 import { validateForm } from "@/lib/validation";
 import {
   saveFormData,
-  getAutosaveData,
   saveAutosaveData,
   clearAutosaveData,
   getFormData,
@@ -48,6 +48,7 @@ const SKILLS_OPTIONS = [
 ];
 
 export default function FormPage() {
+  const [entryId, setEntryId] = useState<string | null>(null);
   const router = useRouter();
   const { toast } = useToast();
   const [formData, setFormData] = useState<Partial<FormData>>({
@@ -55,8 +56,14 @@ export default function FormPage() {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isClient, setIsClient] = useState(false); // To handle client-only rendering
-  const searchParams = useSearchParams();
-  const entryId = searchParams.get("id");
+  
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setEntryId(params.get("id"));
+    }
+  }, []);
 
   // Client-only hook for preventing hydration issues
   useEffect(() => {
@@ -154,7 +161,7 @@ export default function FormPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                error={errors.name}
+                
               />
               {errors.name && (
                 <p className="text-sm text-destructive text-red-500">
@@ -172,7 +179,7 @@ export default function FormPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                error={errors.email}
+                
               />
               {errors.email && (
                 <p className="text-sm text-destructive text-red-500">
@@ -190,7 +197,7 @@ export default function FormPage() {
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
                 }
-                error={errors.phone}
+                
               />
               {errors.phone && (
                 <p className="text-sm text-destructive text-red-500">
@@ -265,7 +272,7 @@ export default function FormPage() {
                     expectedSalary: parseInt(e.target.value, 10),
                   })
                 }
-                error={errors.expectedSalary}
+                
               />
               {errors.expectedSalary && (
                 <p className="text-sm text-destructive text-red-500">
@@ -310,7 +317,7 @@ export default function FormPage() {
                   setFormData({ ...formData, introduction: e.target.value })
                 }
                 maxLength={500}
-                error={errors.introduction}
+                
               />
               <p className="text-sm text-muted-foreground">
                 {formData.introduction?.length || 0}/500 characters
