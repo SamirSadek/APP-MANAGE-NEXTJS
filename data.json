@@ -120,9 +120,11 @@
     "skills": [
       "JavaScript",
       "React",
-      "Node.js"
+      "Node.js",
+      "SQL",
+      "Java"
     ],
-    "name": "Samir Sadek 5",
+    "name": "Samir Sadek 5z",
     "email": "samirsadek1009@gmail.com",
     "phone": "01860425693",
     "experienceLevel": "Mid",
@@ -130,7 +132,7 @@
     "employmentStatus": "Unemployed",
     "introduction": "2",
     "id": "2166164d-2b8b-42c4-b556-78ff498e7e92",
-    "updatedAt": "2025-02-05T08:25:08.653Z",
+    "updatedAt": "2025-02-05T09:00:59.921Z",
     "createdAt": "2025-02-05T08:22:50.845Z"
   },
   {
