@@ -2,7 +2,6 @@
 
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 import {
   Card,
@@ -49,7 +48,6 @@ const SKILLS_OPTIONS = [
 
 export default function FormPage() {
   const [entryId, setEntryId] = useState<string | null>(null);
-  const router = useRouter();
   const { toast } = useToast();
   const [formData, setFormData] = useState<Partial<FormData>>({
     skills: [],
@@ -136,7 +134,7 @@ export default function FormPage() {
         : "Application submitted successfully",
     });
 
-    router.push("/data");
+    window.location.href = "/data";
   };
 
   // Ensure client-side rendering

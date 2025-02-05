@@ -115,5 +115,22 @@
     "introduction": "232",
     "id": "091b534d-32cd-46f2-97f6-075e1092e80c",
     "updatedAt": "2025-02-05T07:15:03.250Z"
+  },
+  {
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js"
+    ],
+    "name": "Samir Sadek 5",
+    "email": "samirsadek1009@gmail.com",
+    "phone": "01860425693",
+    "experienceLevel": "Mid",
+    "expectedSalary": 2,
+    "employmentStatus": "Unemployed",
+    "introduction": "2",
+    "id": "2166164d-2b8b-42c4-b556-78ff498e7e92",
+    "updatedAt": "2025-02-05T08:25:08.653Z",
+    "createdAt": "2025-02-05T08:22:50.845Z"
   }
 ]
